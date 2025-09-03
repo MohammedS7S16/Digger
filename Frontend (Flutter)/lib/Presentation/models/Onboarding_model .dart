@@ -15,12 +15,12 @@ class OnboardingModel {
 
 final List<OnboardingModel> onboardingData = [
   OnboardingModel(
-    image: "assets/Onboarding/onboard.png",
+    image: "assets/Onboarding/onboard1.png",
     description:
     "The Perfect Solution For Metal Prices Prediction\nWith Simple Tools And Visuals.",
     title: [
       TextSpan(
-        text: "Welcome To The World Of \n",
+        text: "Welcome To The \n World Of ",
         style: GoogleFonts.poppins(
           fontSize: 22,
           fontWeight: FontWeight.bold,
@@ -30,7 +30,7 @@ final List<OnboardingModel> onboardingData = [
       TextSpan(
         text: "Digger.",
         style: GoogleFonts.poppins(
-          fontSize: 22,
+          fontSize: 23,
           fontWeight: FontWeight.bold,
           color: const Color(0xffF4A300),
         ),
@@ -38,7 +38,7 @@ final List<OnboardingModel> onboardingData = [
     ],
   ),
   OnboardingModel(
-    image: "assets/Onboarding/onboard.png",
+    image: "assets/Onboarding/onboard2.png",
     description:
     "Explore The Visuals And Predictions of Metal\nPrices By Ease.",
     title: [
@@ -53,6 +53,7 @@ final List<OnboardingModel> onboardingData = [
       TextSpan(
         text: "Those Looking ",
         style: GoogleFonts.poppins(
+
           fontSize: 22,
           fontWeight: FontWeight.bold,
           color: const Color(0xffF4A300),
@@ -69,8 +70,8 @@ final List<OnboardingModel> onboardingData = [
     ],
   ),
   OnboardingModel(
-    image: "assets/Onboarding/onboard.png",
-    description: "Dive Into The World Of Metals Now!",
+    image: "assets/Onboarding/onboard3.png",
+    description: "",
     title: [
       TextSpan(
 
@@ -85,13 +86,13 @@ final List<OnboardingModel> onboardingData = [
       TextSpan(
         text: "Accuracy ",
         style: GoogleFonts.poppins(
-          fontSize: 20,
+          fontSize: 17,
           fontWeight: FontWeight.bold,
           color: const Color(0xffF4A300),
         ),
       ),
-     /* TextSpan(
-        text: "And ",
+      TextSpan(
+        text: "\n And ",
         style: GoogleFonts.poppins(
           fontSize: 17,
           fontWeight: FontWeight.w600,
@@ -101,17 +102,17 @@ final List<OnboardingModel> onboardingData = [
       TextSpan(
         text: "Simplicity ",
         style: GoogleFonts.poppins(
-          fontSize: 20,
+          fontSize: 17,
           fontWeight: FontWeight.bold,
           color: const Color(0xffF4A300),
         ),
-      ),*/
+      ),
       TextSpan(
         text: "\nBegins Here.",
         style: GoogleFonts.poppins(
           fontSize: 22,
           fontWeight: FontWeight.bold,
-          color: const Color(0xffF4A300),
+          color: const Color(0xff17223B),
         ),
       ),
 

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/Onboarding_model .dart';
-import '../widgets/Custom_Onboarding_Bottom.dart';
+import '../widgets/Custom_Onboarding.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -23,28 +22,62 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            if (currentPage != onboardingData.length - 1)
-              Align(
-                alignment: Alignment.topRight,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed("Login");
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(9.0),
-                    child: Text(
-                      "Skip",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xff404D6C),
-                      ),
+
+            (currentPage != onboardingData.length - 1)
+                ? Align(
+              alignment: Alignment.topRight,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed("Login");
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15, right: 10),
+                  child: Text(
+                    "Skip",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xff404D6C),
                     ),
                   ),
                 ),
               ),
+            )
+                : Align(
+              alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: InkWell(
+                  onTap: () {
+                    viewController.previousPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                    );
+                  },
+                  child:  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: const Color(0xffD3D3D0),
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Color(0xffDBDBDB), 
+                        width: 2,
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.arrow_back_rounded,
+                      color: Color(0xff858891),
+                      size: 24,
+                    ),
+                  )
 
-            // PageView
+
+                ),
+              ),
+            ),
+
+
             PageView.builder(
               controller: viewController,
               itemCount: onboardingData.length,
